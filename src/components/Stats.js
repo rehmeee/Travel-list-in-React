@@ -1,8 +1,8 @@
 function Stats() {
     return (
-        <div>
-            
-        </div>
+        <footer className="stats">
+            <em>you have thsee items on you trip 👻 (X%)</em>
+        </footer>
     )
 }
 
