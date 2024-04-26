@@ -8,6 +8,7 @@ function Form() {
         console.log(newItem);
         setDescription("");
         setquantity(1);
+        //this is just for to show the code on the github
     }
     const [description,setDescription] = useState("");
     const [quantity,setquantity] = useState(1);
