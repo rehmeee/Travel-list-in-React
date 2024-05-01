@@ -14,11 +14,22 @@ export default function App() {
   function handleRomveItem(id) {
     setItems((items) => items.filter((item) => item.id !== id));
   }
+  function handleToggleItem(id) {
+    setItems((items) =>
+      items.map((item) =>
+        item.id === id ? { ...item, packed: !item.packed } : item
+      )
+    );
+  }
   return (
     <div className="app">
       <Logo />
       <Form handleAddItem={handleAddItem} />
-      <PackgingList items={items} handleRomveItem={handleRomveItem} />
+      <PackgingList
+        items={items}
+        handleRomveItem={handleRomveItem}
+        handleToggleItem={handleToggleItem}
+      />
       <Stats />
     </div>
   );
