@@ -21,6 +21,14 @@ export default function App() {
       )
     );
   }
+  function handleSetItems() {
+    if (!items.length) return;
+    const confirme = window.confirm(
+      "Are you sure you want to delete this list?"
+    );
+
+    if (confirme) setItems([]);
+  }
   return (
     <div className="app">
       <Logo />
@@ -29,6 +37,7 @@ export default function App() {
         items={items}
         handleRomveItem={handleRomveItem}
         handleToggleItem={handleToggleItem}
+        handleSetItems={handleSetItems}
       />
       <Stats items={items} />
     </div>
