@@ -16,7 +16,7 @@ function Form({ handleAddItem }) {
   }
   return (
     <form className="add-form" onSubmit={handleSubmit}>
-      <h3>What do you need for Your Trip 😍</h3>
+      <h3>Add What you need for Your Trip 😍:</h3>
       <select
         value={quantity}
         onChange={(e) => setquantity(Number(e.target.value))}

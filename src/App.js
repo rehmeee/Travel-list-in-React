@@ -30,7 +30,7 @@ export default function App() {
         handleRomveItem={handleRomveItem}
         handleToggleItem={handleToggleItem}
       />
-      <Stats />
+      <Stats items={items} />
     </div>
   );
 }
